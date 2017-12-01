@@ -1,0 +1,75 @@
+body {
+  background-image: url("./straws.png");
+  background-repeat: repeat;
+  background-color: #cccccc;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.titleLine {
+	line-height: 100px;
+  text-align: center;
+	color: black;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.footerBox {
+  text-align: center;
+  background-color: #666666;
+  font-size: 8px;
+  color: white;
+  border-top: 5px solid #4aaaa5;
+  margin-top: 15px;
+ }
+
+.timerLine {
+  line-height: 40px;
+  text-align: center;
+  color: black;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.questionLine {
+  line-height: 40px;
+  text-align: left;
+  color: black;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.infoLine {
+  line-height: 20px;
+  text-align: left;
+  color: black;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buttonLine {
+  line-height: 40px;
+  text-align: center;
+}
+
+.triviaButton {
+  background-color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  width: 480px;
+  margin: 5px;
+}
+
+.right {
+  background-color: white;
+}
+
+.wrong {
+  background-color: red;
+}
