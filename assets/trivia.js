@@ -44,11 +44,11 @@ function TickTock() {
 		$(".infoLine").text(triviaArray[questionNumber].Info);
 		infoTimer = setTimeout(function () {ClearInfo()}, infoTime*triviaArray[questionNumber].Info.length);
 	}
-}
+};
 
 function ClearInfo() {
 	LoadQuestion();
-}
+};
 
 $(document).ready(function() {
 	LoadQuestion();
