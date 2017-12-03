@@ -13,11 +13,9 @@ function LoadQuestion() {
 	$(".questionLine").text(triviaArray[questionNumber].Question);
 	$(".infoLine").html("<br>");
 	$(".triviaButton").each(function() {
-		var id = $(this).attr("id");
-		var idx = parseInt(id.substr(id.length - 1));
-		$(this).text(triviaArray[questionNumber].Answers[idx]);
 		$(this).removeClass("wrong");
 		$(this).removeClass("right");
+		$(this).text(triviaArray[questionNumber].Answers[$(this).attr("id")]);
 	});
 	totalTime = questionTime;
 	$(".timerLine").text("You have " + totalTime + " seconds left to answer this question");
@@ -26,7 +24,7 @@ function LoadQuestion() {
 		$(".triviaButton").off("click");	
 		clearInterval(secondTimer);
 		$(this).addClass("wrong");
-		$("#answer" + triviaArray[questionNumber].Correct).removeClass("wrong").addClass("right")
+		$("#" + triviaArray[questionNumber].Correct).removeClass("wrong").addClass("right")
 		$(".timerLine").html("<br>");
 		$(".infoLine").text(triviaArray[questionNumber].Info);
 		infoTimer = setTimeout(function () {ClearInfo()}, infoTime*triviaArray[questionNumber].Info.length);
@@ -40,7 +38,7 @@ function TickTock() {
 		$(".triviaButton").off("click")	;
 		clearInterval(secondTimer);
 		$(".timerLine").text("You have ran out of time to answer this question");
-		$("#answer" + triviaArray[questionNumber].Correct).addClass("right") // Mark Correct on Green
+		$("#" + triviaArray[questionNumber].Correct).addClass("right") // Mark Correct on Green
 		$(".infoLine").text(triviaArray[questionNumber].Info);
 		infoTimer = setTimeout(function () {ClearInfo()}, infoTime*triviaArray[questionNumber].Info.length);
 	}
